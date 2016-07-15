@@ -4,6 +4,6 @@ t_mnsh	mnsh_init()
 {
 	t_mnsh	new;
 
-	new.father = 0;
+	new.command = NULL;
 	return (new);
 }

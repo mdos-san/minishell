@@ -6,5 +6,6 @@ int		main()
 
 	mnsh = mnsh_init();
 	mnsh_start(&mnsh);
+	mnsh_free(&mnsh);
 	return (0);
 }

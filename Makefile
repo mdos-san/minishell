@@ -3,6 +3,7 @@ NAME=		minishell
 TMP_C=		main.c\
 			mnsh_init.c\
 			mnsh_start.c\
+			mnsh_free.c\
 			command_get.c
 
 SRC_C=		$(TMP_C:%=srcs/%)
@@ -23,7 +24,7 @@ includes/libft.h:
 	cp libft/includes/libft.h includes
 
 $(NAME):
-	gcc -o $(NAME) $(SRC_O) -L. libft.a $(FLAG)
+	gcc -o $(NAME) $(SRC_O) -I./includes -L. libft.a $(FLAG)
 
 %.o:	srcs/%.c
 	gcc -c -I./includes $< $(FLAG)
