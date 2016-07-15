@@ -1,13 +1,18 @@
 NAME=		minishell
 
-TMP_C=		main.c
+TMP_C=		main.c\
+			mnsh_init.c\
+			mnsh_start.c\
+			command_get.c
 
 SRC_C=		$(TMP_C:%=srcs/%)
 SRC_O=		$(TMP_C:.c=.o)
 
 FLAG=		-Werror -Wextra -Wall
 
-all: libft.a includes/libft.h $(NAME)
+all: libft.a includes/libft.h $(SRC_O) $(NAME)
+
+
 
 libft.a:
 	make -C libft
@@ -18,9 +23,10 @@ includes/libft.h:
 	cp libft/includes/libft.h includes
 
 $(NAME):
-	gcc -c $(SRC_C) -I./includes $(FLAG)
 	gcc -o $(NAME) $(SRC_O) -L. libft.a $(FLAG)
 
+%.o:	srcs/%.c
+	gcc -c -I./includes $< $(FLAG)
 clean:
 	rm -rf $(SRC_O)
 
