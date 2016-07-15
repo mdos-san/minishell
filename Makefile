@@ -4,7 +4,9 @@ TMP_C=		main.c\
 			mnsh_init.c\
 			mnsh_start.c\
 			mnsh_free.c\
-			command_get.c
+			command_get.c\
+			built_in_check.c\
+			bt_env.c
 
 SRC_C=		$(TMP_C:%=srcs/%)
 SRC_O=		$(TMP_C:.c=.o)
