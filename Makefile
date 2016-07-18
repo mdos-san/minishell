@@ -8,6 +8,7 @@ TMP_C=		main.c\
 			built_in_check.c\
 			bt_env.c\
 			bt_setenv.c\
+			bt_cd.c\
 			str_array_count.c\
 			str_array_dup.c\
 			str_array_del.c\
