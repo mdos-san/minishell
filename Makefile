@@ -7,10 +7,12 @@ TMP_C=		main.c\
 			command_get.c\
 			built_in_check.c\
 			bt_env.c\
+			bt_setenv.c\
 			str_array_count.c\
 			str_array_dup.c\
 			str_array_del.c\
-			str_array_add.c
+			str_array_add.c\
+			split_command.c
 
 SRC_C=		$(TMP_C:%=srcs/%)
 SRC_O=		$(TMP_C:.c=.o)
