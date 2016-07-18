@@ -21,7 +21,8 @@ char			*command_get();
 int				built_in_check(t_mnsh *mnsh);
 void			bt_env(t_mnsh *mnsh);
 int				str_array_count(char **array);
-char			**str_array_dup(char **array);
+char			**str_array_dup(char **array, int extra_row);
 void			str_array_del(char ***addr);
+void			str_array_add(char ***array, char *str);
 
 #endif

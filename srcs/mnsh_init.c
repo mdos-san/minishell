@@ -7,6 +7,6 @@ t_mnsh	mnsh_init(int ac, char **av, char **env)
 	new.command = NULL;
 	new.ac = ac;
 	new.av = av;
-	new.env = str_array_dup(env);
+	new.env = str_array_dup(env, 0);
 	return (new);
 }

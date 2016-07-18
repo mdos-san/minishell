@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-char	**str_array_dup(char **array)
+char	**str_array_dup(char **array, int extra_row)
 {
 	char	**new;
 	int		index;
@@ -8,13 +8,17 @@ char	**str_array_dup(char **array)
 
 	index = 0;
 	max = str_array_count(array);
-	new = (char **)malloc((max + 1) * sizeof(char*));
+	new = (char **)malloc((max + 1 + extra_row) * sizeof(char*));
 	if (new == NULL)
 		return (NULL);
-	new[max] = NULL;
 	while (index < max)
 	{
 		new[index] = ft_strdup(array[index]);
+		++index;
+	}
+	while (index <= max + extra_row)
+	{
+		new[index] = NULL;
 		++index;
 	}
 	return (new);
