@@ -3,6 +3,8 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <sys/types.h>
+# include <sys/wait.h>
 
 # include "libft.h"
 
@@ -20,6 +22,7 @@ void			mnsh_start(t_mnsh *mnsh);
 void			mnsh_free(t_mnsh *mnsh);
 char			*command_get();
 int				built_in_check(t_mnsh *mnsh);
+int				bin_check(t_mnsh *mnsh);
 void			bt_env(t_mnsh *mnsh);
 void			bt_setenv(t_mnsh *mnsh);
 void			bt_cd(t_mnsh *mnsh);

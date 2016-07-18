@@ -7,6 +7,8 @@ void	mnsh_start(t_mnsh *mnsh)
 		ft_strdel(&mnsh->command);
 		mnsh->command = command_get();
 		split_command(mnsh);
-		built_in_check(mnsh);
+		(built_in_check(mnsh) == 0)
+		? bin_check(mnsh)
+		: 0;
 	}
 }

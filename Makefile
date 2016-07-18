@@ -6,6 +6,7 @@ TMP_C=		main.c\
 			mnsh_free.c\
 			command_get.c\
 			built_in_check.c\
+			bin_check.c\
 			bt_env.c\
 			bt_setenv.c\
 			bt_cd.c\
