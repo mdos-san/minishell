@@ -14,7 +14,8 @@ TMP_C=		main.c\
 			str_array_dup.c\
 			str_array_del.c\
 			str_array_add.c\
-			split_command.c
+			split_command.c\
+			ft_strstart.c
 
 SRC_C=		$(TMP_C:%=srcs/%)
 SRC_O=		$(TMP_C:.c=.o)

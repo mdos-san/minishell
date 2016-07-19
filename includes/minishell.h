@@ -31,5 +31,6 @@ char			**str_array_dup(char **array, int extra_row);
 void			str_array_del(char ***addr);
 void			str_array_add(char ***array, char *str);
 void			split_command(t_mnsh *mnsh);
+int				ft_strstart(char *str, char *pattern);
 
 #endif
