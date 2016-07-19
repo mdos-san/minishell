@@ -5,6 +5,7 @@ void	split_command(t_mnsh *mnsh)
 	int	index;
 
 	index = 0;
+	mnsh->parameters = ft_strsplit(mnsh->command, ' ');
 	while (index + 1 != '\0')
 	{
 		(mnsh->command[index] == ' ') ? (mnsh->command[index] = '\0') : 0;
@@ -12,5 +13,4 @@ void	split_command(t_mnsh *mnsh)
 			break ;
 		++index;
 	}
-	mnsh->parameters = mnsh->command + index + 1;
 }

@@ -14,7 +14,7 @@ typedef struct	s_mnsh
 	char		**av;
 	char		**env;
 	char		*command;
-	char		*parameters;
+	char		**parameters;
 }				t_mnsh;
 
 t_mnsh			mnsh_init(int ac, char **av, char **env);
