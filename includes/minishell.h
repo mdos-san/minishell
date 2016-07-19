@@ -32,5 +32,6 @@ void			str_array_del(char ***addr);
 void			str_array_add(char ***array, char *str);
 void			split_command(t_mnsh *mnsh);
 int				ft_strstart(char *str, char *pattern);
+char			*str_array_find(char **arr, char *pattern);
 
 #endif

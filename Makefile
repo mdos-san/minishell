@@ -14,6 +14,7 @@ TMP_C=		main.c\
 			str_array_dup.c\
 			str_array_del.c\
 			str_array_add.c\
+			str_array_find.c\
 			split_command.c\
 			ft_strstart.c
 
