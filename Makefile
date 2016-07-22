@@ -10,6 +10,7 @@ TMP_C=		main.c\
 			bt_env.c\
 			bt_setenv.c\
 			bt_cd.c\
+			bt_echo.c\
 			str_array_count.c\
 			str_array_dup.c\
 			str_array_del.c\
