@@ -11,10 +11,12 @@ TMP_C=		main.c\
 			bt_setenv.c\
 			bt_cd.c\
 			bt_echo.c\
+			bt_unsetenv.c\
 			str_array_count.c\
 			str_array_dup.c\
 			str_array_del.c\
 			str_array_add.c\
+			str_array_sub.c\
 			str_array_find.c\
 			split_command.c\
 			ft_strstart.c

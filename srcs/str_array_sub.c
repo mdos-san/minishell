@@ -13,7 +13,7 @@ void	str_array_sub(char ***stra, char *pattern)
 	new = (char **)malloc(line * sizeof(char *));
 	while ((*stra)[i])
 	{
-		if (ft_strstart(stra[i], pattern) == 0)
+		if (ft_strstart((*stra)[i], pattern) == 0)
 		{
 			new[j] = ft_strdup((*stra)[i]);
 			++j;
