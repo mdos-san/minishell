@@ -31,6 +31,8 @@ static char *find_bin(char **paths, char *cmd)
 		ft_strdel(&bin);
 		++i;
 	}
+	if (access(cmd, X_OK) == 0)
+		return (cmd);
 	return (NULL);
 }
 
