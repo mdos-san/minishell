@@ -12,7 +12,7 @@ void	mnsh_start(t_mnsh *mnsh)
 		split_command(mnsh);
 		(built_in_check(mnsh) == 0)
 		? (ret = bin_check(mnsh)) : 0;
-		if (ret == 0)
+		if (ret == 0 && ft_strcmp(mnsh->command, "exit") != 0)
 		{
 			ft_putstr(mnsh->command);
 			ft_putendl(": command not found");
