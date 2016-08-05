@@ -1,4 +1,5 @@
 *.a
 *.o
 *.swp
+.nfs.20051075.265d
 minishell
