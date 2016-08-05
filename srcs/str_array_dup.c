@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 10:02:54 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 10:02:56 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 11:49:30 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	**str_array_dup(char **array, int extra_row)
 	index = 0;
 	max = str_array_count(array);
 	new = (char **)malloc((max + 1 + extra_row) * sizeof(char*));
-	if (new == NULL)
+	new[max + extra_row] = NULL;
+	if (array == NULL)
 		return (NULL);
 	while (index < max)
 	{

@@ -6,7 +6,7 @@
 /*   By: mdos-san <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:26:58 by mdos-san          #+#    #+#             */
-/*   Updated: 2015/12/03 16:18:33 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 11:35:34 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 
 	i = 0;
 	if (!s1 || !s2)
-		return (0);
+		return (1);
 	while (S1_CAST && S2_CAST)
 	{
 		if (S1_CAST != S2_CAST)
