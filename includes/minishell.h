@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 10:07:33 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 13:47:03 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 14:57:17 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <sys/types.h>
 # include <sys/wait.h>
+# include <signal.h>
 
 # include "libft.h"
 

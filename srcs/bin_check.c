@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 10:00:58 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 10:07:19 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 15:57:50 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,20 @@ static char	*find_bin(char **paths, char *cmd)
 	return (NULL);
 }
 
+static int	store_pid(int new_pid)
+{
+	static int	pid;
+
+	(new_pid > 0) ? (pid = new_pid) : 0;
+	return (pid);
+}
+
+static void	handler(int sig)
+{
+	kill(store_pid(0), SIGINT);
+	(void)sig;
+}
+
 int			bin_check(t_mnsh *mnsh)
 {
 	char	*bin;
@@ -64,7 +78,8 @@ int			bin_check(t_mnsh *mnsh)
 	if (bin != NULL)
 	{
 		pid = fork();
-		(pid > 0) ? wait(&status) : 0;
+		if (pid > 0 && store_pid(pid) > 0 && signal(SIGINT, handler) != SIG_ERR)
+			wait(&status);
 		if (pid == 0)
 		{
 			execve(bin, mnsh->parameters, mnsh->env);

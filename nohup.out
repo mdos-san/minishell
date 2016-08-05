@@ -1,0 +1,33 @@
+[1;1H[2JWelcome to minishell :D !
+
+$> Makefile
+auteur
+bin_check.o
+bt_cd.o
+bt_echo.o
+bt_env.o
+bt_setenv.o
+bt_unsetenv.o
+built_in_check.o
+command_get.o
+ft_strstart.o
+includes
+libft
+libft.a
+main.o
+minishell
+mnsh_free.o
+mnsh_init.o
+mnsh_parse.o
+mnsh_start.o
+nohup.out
+split_command.o
+srcs
+str_array_add.o
+str_array_count.o
+str_array_del.o
+str_array_dup.o
+str_array_find.o
+str_array_new.o
+str_array_sub.o
+$> 

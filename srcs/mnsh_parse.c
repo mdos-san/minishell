@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 13:07:13 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 14:20:41 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 16:01:42 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void	allocate(char ***tab, char *str, int *i, int i2)
 	*i = i2;
 }
 
-char	**mnsh_parse(char *str)
+char		**mnsh_parse(char *str)
 {
 	char	**tab;
 	int		i;

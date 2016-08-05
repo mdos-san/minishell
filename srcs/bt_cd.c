@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 10:01:03 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 10:01:05 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 14:39:24 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	bt_cd(t_mnsh *mnsh)
 {
 	(chdir(mnsh->parameters[1]) == 0)
-	? ft_putendl("Success")
+	? 0
 	: ft_putendl("cd: can't open directory");
 }
