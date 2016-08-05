@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 10:02:34 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 11:41:56 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 16:30:38 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,5 @@ void	mnsh_start(t_mnsh *mnsh)
 			ft_putendl(": command not found");
 		}
 	}
+	ft_strdel(&mnsh->command);
 }

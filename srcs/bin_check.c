@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 10:00:58 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 15:57:50 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 16:23:05 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ int			bin_check(t_mnsh *mnsh)
 			execve(bin, mnsh->parameters, mnsh->env);
 			exit(0);
 		}
+		str_array_del(&paths);
+		ft_strdel(&bin);
 		return (1);
 	}
 	return (0);
