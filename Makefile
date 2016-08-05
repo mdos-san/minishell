@@ -4,6 +4,7 @@ TMP_C=		main.c\
 			mnsh_init.c\
 			mnsh_start.c\
 			mnsh_free.c\
+			mnsh_parse.c\
 			command_get.c\
 			built_in_check.c\
 			bin_check.c\
@@ -12,6 +13,7 @@ TMP_C=		main.c\
 			bt_cd.c\
 			bt_echo.c\
 			bt_unsetenv.c\
+			str_array_new.c\
 			str_array_count.c\
 			str_array_dup.c\
 			str_array_del.c\

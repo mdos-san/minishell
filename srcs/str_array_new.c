@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   split_command.c                                    :+:      :+:    :+:   */
+/*   str_array_new.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/05 10:02:38 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 14:09:00 by mdos-san         ###   ########.fr       */
+/*   Created: 2016/08/05 13:16:13 by mdos-san          #+#    #+#             */
+/*   Updated: 2016/08/05 13:19:30 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void	split_command(t_mnsh *mnsh)
+char	**str_array_new(void)
 {
-	mnsh->parameters = mnsh_parse(mnsh->command);
-	mnsh->command = ft_strdup(mnsh->parameters[0]);
+	char	**new;
+
+	new = (char**)malloc(sizeof(char *));
+	if (new == NULL)
+		return (NULL);
+	new[0] = NULL;
+	return (new);
 }

@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 10:01:19 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 11:49:56 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 14:20:54 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int			env_check(t_mnsh *mnsh)
 	return (0);
 }
 
-void	bt_env(t_mnsh *mnsh)
+void		bt_env(t_mnsh *mnsh)
 {
 	int	index;
 

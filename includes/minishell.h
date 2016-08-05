@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 10:07:33 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 10:07:35 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/05 13:47:03 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct	s_mnsh
 t_mnsh			mnsh_init(int ac, char **av, char **env);
 void			mnsh_start(t_mnsh *mnsh);
 void			mnsh_free(t_mnsh *mnsh);
+char			**mnsh_parse(char *str);
 char			*command_get();
 int				built_in_check(t_mnsh *mnsh);
 int				bin_check(t_mnsh *mnsh);
@@ -40,6 +41,7 @@ void			bt_setenv(t_mnsh *mnsh);
 void			bt_cd(t_mnsh *mnsh);
 void			bt_echo(t_mnsh *mnsh);
 void			bt_unsetenv(t_mnsh *mnsh);
+char			**str_array_new(void);
 int				str_array_count(char **array);
 char			**str_array_dup(char **array, int extra_row);
 void			str_array_del(char ***addr);
