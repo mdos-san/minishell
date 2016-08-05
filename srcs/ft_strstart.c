@@ -1,10 +1,16 @@
-#include "minishell.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstart.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/05 10:02:06 by mdos-san          #+#    #+#             */
+/*   Updated: 2016/08/05 10:05:13 by mdos-san         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-/*
-**
-**	This function verify if str begin by pattern.
-**
-*/
+#include "minishell.h"
 
 int	ft_strstart(char *str, char *pattern)
 {

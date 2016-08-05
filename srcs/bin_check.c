@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   bin_check.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/08/05 10:00:58 by mdos-san          #+#    #+#             */
+/*   Updated: 2016/08/05 10:07:19 by mdos-san         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static char	*go_to_equal(char *str)
@@ -11,12 +23,12 @@ static char	*go_to_equal(char *str)
 	return (str + i);
 }
 
-static char *find_bin(char **paths, char *cmd)
+static char	*find_bin(char **paths, char *cmd)
 {
 	char	*tmp;
 	char	*bin;
 	int		i;
-	
+
 	i = 0;
 	while (paths[i])
 	{
@@ -36,7 +48,7 @@ static char *find_bin(char **paths, char *cmd)
 	return (NULL);
 }
 
-int	bin_check(t_mnsh *mnsh)
+int			bin_check(t_mnsh *mnsh)
 {
 	char	*bin;
 	char	*path;
