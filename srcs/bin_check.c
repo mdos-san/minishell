@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 10:00:58 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 16:23:05 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/06 12:08:11 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ int			bin_check(t_mnsh *mnsh)
 	pid_t	pid;
 	int		status;
 
-	status = 0;
 	path = str_array_find(mnsh->env, "PATH=");
 	path = go_to_equal(path);
 	paths = ft_strsplit(path, ':');

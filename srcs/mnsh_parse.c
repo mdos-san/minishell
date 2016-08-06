@@ -6,7 +6,7 @@
 /*   By: mdos-san <mdos-san@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/05 13:07:13 by mdos-san          #+#    #+#             */
-/*   Updated: 2016/08/05 16:01:42 by mdos-san         ###   ########.fr       */
+/*   Updated: 2016/08/06 11:17:55 by mdos-san         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,25 @@ static int	is_space(char c)
 
 static int	go_next_quote(char *str, int *i)
 {
+	int	nbr;
+
+	nbr = 0;
+	*i += 1;
 	while (str[*i])
 	{
 		if (str[*i] == '"')
-			return (1);
+			return (nbr);
 		*i += 1;
+		++nbr;
 	}
-	return (0);
+	return (-1);
 }
 
 static int	go_next_space(char *str, int *i)
 {
 	while (str[*i])
 	{
-		if (is_space(str[*i]))
+		if (is_space(str[*i]) || str[*i] == '"')
 			return (1);
 		*i += 1;
 	}
@@ -66,10 +71,10 @@ char		**mnsh_parse(char *str)
 		i2 = i;
 		if (str[i] == '"')
 		{
-			++i2;
 			++i;
-			go_next_quote(str, &i2);
-			allocate(&tab, str, &i, i2);
+			(go_next_quote(str, &i2) > 0) ? allocate(&tab, str, &i, i2) : 0;
+			(str[i2] != '\0') ? (str[i2] = ' ') : 0;
+			i = i2;
 		}
 		else if ((i - 1 == -1 && !is_space(str[i]))
 			|| (i > 0 && (is_space(str[i - 1]) && !is_space(str[i]))))
